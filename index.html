@@ -28,6 +28,12 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="icon" type="image/x-icon" href="./assets/images/logo.png">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+   (function(){
+      emailjs.init("OGnuFHdY1fKLv-NYe");
+   })();
+  </script>
 </head>
 <body class="font-sans">
 <!-- Header -->
@@ -38,7 +44,7 @@
   <div class="nav flex justify-between items-center py-6 px-10 container mx-auto">
 
     <div>
-      <h1 class="hover:cursor-pointer"><img src="./assets/images/logo.png" alt="logo" class="w-10"></h1>
+      <h1 class="hover:cursor-pointer"><img src="./assets/images/logo.png" alt="logo personale di Mattia Caprioli" class="w-10"></h1>
     </div>
 
     <div>
@@ -56,7 +62,7 @@
               <a href="#about-me" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">About me</a>
             </li>
             <li>
-              <a href="#portfolio" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Portfolio</a>
+              <a href="#projects" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Projects</a>
             </li>
             <li>
               <a href="#skills" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Skills</a>
@@ -92,7 +98,7 @@
 <a  name="about-me"></a>
 <div class="m-auto max-w-xl py-4 px-8 bg-white shadow-lg rounded-lg my-20">
   <div class="flex justify-center md:justify-end -mt-16">
-    <img class="w-20 h-20 object-cover rounded-full border-2 border-indigo-500" src="./assets/images/foto-professionale.jpg" alt="foto personale">
+    <img class="w-20 h-20 object-cover rounded-full border-2 border-indigo-500" src="./assets/images/foto-professionale.jpg" alt="foto personale di Mattia Caprioli">
   </div>
   <div>
     <h2 class="text-3xl font-bold bg-gradient-to-tr from-indigo-600 to-green-600 bg-clip-text text-transparent hover:cursor-pointer">About me</h2>
@@ -100,22 +106,42 @@
   </div>
 </div>
 <!--/about me-->
-<!--portfolio-->
-<a  name="portfolio"></a>
+<!--projects-->
+
+<a  name="projects"></a>
 <div class="py-12 items-center justify-center bg-indigo-50 px-4">
-  <div class="m-auto max-w-sm overflow-hidden rounded-xl bg-white shadow-md duration-200 hover:scale-105 hover:shadow-xl">
-    <h2 class="text-center pt-7 pl-5 text-3xl font-bold bg-gradient-to-tr from-indigo-600 to-green-600 bg-clip-text text-transparent hover:cursor-pointer">Portfolio</h2>
+  <div class="m-auto overflow-hidden rounded-xl bg-white shadow-md duration-200">
+    <h2 class="text-center pt-7 pl-5 text-3xl font-bold bg-gradient-to-tr from-indigo-600 to-green-600 bg-clip-text text-transparent hover:cursor-pointer">projects</h2>
+    <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 xl:mt-12 xl:grid-cols-2 xl:gap-12">
+      <div class="ml-2 mt-6 w-full sm:w-1/2">
+        <a href="https://mattiacaprioli.github.io/front-end-development01/">
+          <img class="h-25 w-full hover:scale-105 hover:shadow-xl transition-3000" src="./assets/images/metaFacebook.png" alt="Il sito del progetto di html e css" />
+        </a>
+        <a href="https://mattiacaprioli.github.io/front-end-development01/">
+          <h3 class="mt-2 ml-5 text-2xl font-semibold capitalize text-gray-800">Portfolio</h3>
+        </a>
+      </div>
+      <div class="ml-2 mt-6 w-full sm:w-1/2">
+        <a href="https://mattiacaprioli.github.io/counter-javascript-base/">
+          <img class="h-30 w-full hover:scale-105 hover:shadow-xl transition-3000" src="./assets/images/counter-javascript.png" alt="il progetto di javascript base, il counter" />
+        </a>
+        <a href="https://mattiacaprioli.github.io/counter-javascript-base/">
+          <h3 class="mt-2 ml-5 text-2xl font-semibold capitalize text-gray-800">Counter javascript</h3>
+        </a>
+      </div>
+    </div>
+    
     <div class='flex items-center justify-center m-6 my-20'>
       <div style="border-top-color:transparent" class="w-8 h-8 border-4 border-blue-200 rounded-full animate-spin"></div>
       <p class="ml-2">work in progress...</p>
     </div>
     <div class="p-5">
-      <p class="text-medium mb-5 text-gray-700 text-center">The Portfolio section is still in the making. <br> Come back later to learn more about my work!</p>
+      <p class="text-medium mb-5 text-gray-700 text-center">The projects section is still in the making. <br> Come back later to learn more about my work!</p>
     <!--  <button class="w-full rounded-md bg-indigo-600  py-2 text-indigo-100 hover:bg-indigo-500 hover:shadow-md duration-75">See More</button>  -->
     </div>
   </div>
 </div>
-<!--/portfolio-->
+<!--/projects-->
 
 <!--skills-->
 <a  name="skills"></a>
@@ -127,17 +153,17 @@
 
       <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 xl:mt-12 xl:grid-cols-3 xl:gap-12">
       <div>
-          <img class="h-96 w-full rounded-lg object-cover" src="https://images.unsplash.com/photo-1621111848501-8d3634f82336?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1565&q=80" alt="" />
+          <img class="h-96 w-full rounded-lg object-cover hover:scale-105 hover:shadow-xl" src="https://images.unsplash.com/photo-1621111848501-8d3634f82336?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1565&q=80" alt="la struttura di un sito (html)" />
           <h3 class="mt-4 text-2xl font-semibold capitalize text-gray-800">HTML</h3>
       </div>
 
       <div>
-          <img class="h-96 w-full rounded-lg object-cover" src="https://images.unsplash.com/photo-1621609764180-2ca554a9d6f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" alt="" />
+          <img class="h-96 w-full rounded-lg object-cover hover:scale-105 hover:shadow-xl" src="https://images.unsplash.com/photo-1621609764180-2ca554a9d6f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" alt="rappresentazione più chiara del lavoro sullo stile di un sito (css)" />
           <h3 class="mt-4 text-2xl font-semibold capitalize text-gray-800">CSS</h3>
       </div>
 
       <div>
-          <img class="h-96 w-full rounded-lg object-cover" src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="" />
+          <img class="h-96 w-full rounded-lg object-cover hover:scale-105 hover:shadow-xl" src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="il marketing svolto per il sito (advertising)" />
           <h3 class="mt-4 text-2xl font-semibold capitalize text-gray-800">ADVERTISING</h3>
       </div>
       </div>
@@ -223,21 +249,21 @@
 
             <form class="mt-6">
                 <div class="flex-1">
-                <label class="mb-2 block text-sm text-gray-600 dark:text-gray-200">Full Name</label>
-                <input type="text" class="mt-2 block w-full rounded-md border border-gray-200 bg-white px-5 py-3 text-gray-700 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" required/>
+                <label class="mb-2 block text-sm text-gray-600">Full Name</label>
+                <input id="user_name" type="text" class="mt-2 block w-full rounded-md border border-gray-200 bg-white px-5 py-3 text-gray-700 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" required/>
                 </div>
 
                 <div class="mt-6 flex-1">
                 <label class="mb-2 block text-sm text-gray-600">Email address</label>
-                <input type="email" class="mt-2 block w-full rounded-md border border-gray-200 bg-white px-5 py-3 text-gray-700 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" required />
+                <input id="user_email" type="email" class="mt-2 block w-full rounded-md border border-gray-200 bg-white px-5 py-3 text-gray-700 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" required />
                 </div>
 
                 <div class="mt-6 w-full">
                 <label class="mb-2 block text-sm text-gray-600">Message</label>
-                <textarea name="contact-message" class="mt-2 block h-32 w-full rounded-md border border-gray-200 bg-white px-5 py-3 text-gray-700 placeholder-gray-400 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 md:h-48" placeholder="Type your message here" required></textarea>
+                <textarea id="message" class="mt-2 block h-32 w-full rounded-md border border-gray-200 bg-white px-5 py-3 text-gray-700 placeholder-gray-400 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 md:h-48" placeholder="Type your message here" required></textarea>
                 </div>
 
-                <button type="submit" class="mt-6 w-full transform rounded-md bg-blue-600 px-6 py-3 text-sm font-medium capitalize tracking-wide text-white transition-colors duration-300 hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-50">Submit</button>
+                <button type="submit" onclick="SendMail()" class="mt-6 w-full transform rounded-md bg-blue-600 px-6 py-3 text-sm font-medium capitalize tracking-wide text-white transition-colors duration-300 hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-50">Submit</button>
             </form>
             </div>
         </div>
@@ -250,5 +276,21 @@
       <p class="h-100% m-3 p-6 text-center text-gray-500">Copyright © 2022 Mattia Caprioli. All Rights Reserved.</p>
     </div>
     <!--/footer-->
+    <script>
+       function SendMail() {
+        var params = {
+          user_name : document.getElementById("user_name").value,
+          user_email : document.getElementById("user_email").value,
+          message : document.getElementById("message").value
+        };
+
+        emailjs.send("service_porfolio", "template_luy6lee", params)
+          .then(function (res) {
+            alert("Your data has been successfully sent!");
+          }, function(err) {
+            alert("Something went wrong.");
+          });
+      };
+    </script>
 </body>
 </html>
