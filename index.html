@@ -276,21 +276,6 @@
       <p class="h-100% m-3 p-6 text-center text-gray-500">Copyright © 2022 Mattia Caprioli. All Rights Reserved.</p>
     </div>
     <!--/footer-->
-    <script>
-       function SendMail() {
-        var params = {
-          user_name : document.getElementById("user_name").value,
-          user_email : document.getElementById("user_email").value,
-          message : document.getElementById("message").value
-        };
-
-        emailjs.send("service_porfolio", "template_luy6lee", params)
-          .then(function (res) {
-            alert("Your data has been successfully sent!");
-          }, function(err) {
-            alert("Something went wrong.");
-          });
-      };
-    </script>
+    <script src="./assets/javascript/script.js"></script>
 </body>
 </html>
